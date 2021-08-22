@@ -71,20 +71,20 @@ const SetSizeArea = (props) => {
   }
 
   const memoIndex = useMemo(() => {
-    setIndex(props.sizes.length)
-  }, [props.sizes.length])
+    setIndex(props.sizes?.length)
+  }, [props.sizes?.length])
 
   return (
     <div>
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
-            <tableRow>
+            <TableRow>
               <TableCell>サイズ</TableCell>
               <TableCell>数量</TableCell>
               <TableCell className={classes.iconCell} />
               <TableCell className={classes.iconCell} />
-            </tableRow>
+            </TableRow>
           </TableHead>
           <TableBody>
             {props.sizes?.length > 0 && (
